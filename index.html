@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap"
+            rel="stylesheet"
+        />
+
+        <title>Frontend Mentor | Advice generator app</title>
+        <script src="script.js" defer></script>
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            manrope: ['Manrope', 'sans-serif'],
+                        },
+                        colors: {
+                            lightCyan: 'hsl(193, 38%, 86%)',
+                            neonGreen: 'hsl(150, 100%, 66%)',
+                            grayishBlue: 'hsl(217, 19%, 38%)',
+                            darkGrayBlue: 'hsl(217, 19%, 24%)',
+                            darkBlue: 'hsl(218, 23%, 16%)',
+                        },
+                        width: {
+                            sm: '320px',
+                        },
+                    },
+                },
+            }
+        </script>
+    </head>
+    <body class="bg-darkBlue font-manrope">
+        <main class="h-screen grid place-content-center content-center">
+            <div
+                class="w-sm text-center m-auto bg-darkGrayBlue rounded-xl relative"
+            >
+                <h6
+                    class="tracking-[0.3rem] text-neonGreen text-[12px] pt-10 mb-5"
+                >
+                    ADVICE # <span id="id"></span>
+                </h6>
+                <p class="text-lightCyan text-[28px] px-5" id="">
+                    "<span id="quote"></span>"
+                </p>
+                <img
+                    src="images/pattern-divider-desktop.svg"
+                    alt="divider"
+                    class="py-5 mb-10 w-10/12 mx-auto"
+                />
+                <div
+                    class="bg-neonGreen w-[64px] h-[64px] rounded-full absolute -bottom-[30px] left-32 blur-3xl hidden"
+                    id="glow"
+                ></div>
+                <button
+                    id="btn"
+                    class="bg-neonGreen w-fit rounded-full absolute -bottom-[30px] left-32"
+                >
+                    <img
+                        src="images/icon-dice.svg"
+                        alt="dice icon"
+                        class="p-5"
+                    />
+                </button>
+            </div>
+        </main>
+    </body>
+</html>
